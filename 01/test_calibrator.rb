@@ -1,5 +1,5 @@
-gem "minitest"
-require "minitest/autorun"
+gem 'minitest'
+require 'minitest/autorun'
 require_relative 'calibrator'
 
 SAMPLE_ONE = %w[1abc2 pqr3stu8vwx a1b2c3d4e5f treb7uchet]
@@ -11,6 +11,6 @@ class CalibratorTest < Minitest::Test
   end
 
   def test_calibrates_example_with_letters
-    assert_equal 281, Calibrator.new(SAMPLE_TWO).calibrate_with_letters
+    assert_equal 281, Calibrator.new(SAMPLE_TWO).calibrate(use_words: true)
   end
 end

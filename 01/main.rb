@@ -6,7 +6,7 @@ input = Helpers.read_file_lines 'input.txt'
 calibrator = Calibrator.new input
 
 puts "Part 1: #{calibrator.calibrate}"
-puts "Part 2: #{calibrator.calibrate_with_letters}"
+puts "Part 2: #{calibrator.calibrate(use_words: true)}"
 
 # we learned about greedy capture
 # https://regex101.com/r/UNyBHB/1
